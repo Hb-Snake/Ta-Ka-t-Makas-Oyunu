@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAŞ-KAĞIT-MAKAS</title>
+</head>
+<body style="
+  background-image: url('tas-kagit-makas.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align: center;
+  min-height: 100vh;
+  margin: 0;
+  background-attachment: fixed;
+">
+<style>
+  button {
+    padding: 5px;
+    margin: 10px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  button img {
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+  }
+
+  button img:hover {
+    transform: scale(1.1);
+  }
+</style>
+    <H1><big>TAŞ KAĞIT MAKAS OYUNU</big></H1>
+    <h3>Seçiminizi Yapın</h3>
+    <div style="margin-top: 20px;" class="button-group">
+  <button onclick="taş()" id="taş"><img src="taş.jpg" alt="Taş" width="80" height="80"></button>
+  <button onclick="kağıt()" id="kağıt"><img src="kağıt.jpg" alt="Taş" width="80" height="80"></button>
+  <button onclick="makas()" id="makas"><img src="makas.jpg" alt="Taş" width="80" height="80"></button>
+</div>
+    <br>
+    <br>
+    <button onclick="sıfırla()">Skorları Sıfırla</button>
+    <H4 id="skor">Skorunuz: 0</H4>
+    <H3>Skorlar</H3>
+    <table bgcolor="black" width="700" style="margin: auto;">
+        <tr bgcolor="white">
+            <th width="200" height="50"></th>
+            <th width="200" height="50">Bilgisiyar</th>
+            <th width="200" height="50">Sen</th>
+        </tr>
+        <tr bgcolor="white">
+            <th width="200" height="50">Kazanma</th>
+            <th width="200" height="50" id="pcBilme">0</th>
+            <th width="200" height="50" id="oBilme">0</th>
+        </tr>
+        <tr bgcolor="white">
+            <th width="200" height="50">Kaybetme</th>
+            <th width="200" height="50" id="pcBilmeme">0</th>
+            <th width="200" height="50" id="oBilmeme">0</th>
+        </tr>
+        <tr bgcolor="white">
+            <th width="200" height="50">Berabere</th>
+            <th width="200" height="50" id="pcBerabere">0</th>
+            <th width="200" height="50" id="oBerabere">0</th>
+        </tr>
+        <tr bgcolor="white">
+            <th width="200" height="50">Kazanma Oranı</th>
+            <th width="200" height="50" id="pcOran">%0</th>
+            <th width="200" height="50" id="oOran">%0</th>
+        </tr>
+    </table>
+
+    <audio id="dogru" src="correct-6033.mp3"></audio>
+    <audio id="yanlis" src="wrong-47985.mp3"></audio>
+
+    <div style="color: black;">
+        <H1> Oyun Kuralları </H1>
+        <p>Kazanmak 5 puan</p>
+        <p>Kaybetmek -3 puan</p>
+        <p>Beraberlik 0 puan</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
